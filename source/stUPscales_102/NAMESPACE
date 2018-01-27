@@ -1,0 +1,28 @@
+exportPattern("^[[:alpha:]]+")
+
+export("Agg", "GoF", "PlotEval")
+
+exportMethods(
+    "MC.setup", "MC.calibra", "Validation_Quantity" 
+)
+
+import(methods)
+import(stats)
+import(graphics)
+import(grDevices)
+import(utils)
+import(data.table)
+import(xts)
+import(mAr)
+import(lmom)
+import(EmiStatR)
+
+importFrom(parallel, detectCores, stopCluster, makeCluster, makePSOCKcluster)
+importFrom(doParallel, registerDoParallel)
+importFrom(foreach, foreach, "%dopar%", "%do%")
+importFrom(lattice, xyplot, panel.polygon, panel.superpose, panel.xyplot)
+importFrom(msm, rtnorm)
+importFrom(ggplot2, ggplot, aes, geom_line, geom_ribbon, theme, theme_bw, element_text) 
+importFrom(moments, skewness)
+importFrom(hydroGOF, gof)
+importFrom(zoo, plot.zoo, is.regular)
