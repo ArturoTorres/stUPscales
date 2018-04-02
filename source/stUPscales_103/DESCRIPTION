@@ -1,8 +1,8 @@
 Package: stUPscales
 Type: Package
 Title: Spatio-Temporal Uncertainty Propagation Across Scales
-Version: 1.0.2
-Date: 2017-10-04
+Version: 1.0.3
+Date: 2018-03-02
 Author: J.A. Torres-Matallana [aut, cre]
     U. Leopold [ctb]
     G.B.M. Heuvelink [ctb]
@@ -35,4 +35,4 @@ Imports:
 	hydroGOF,
 	zoo
 NeedsCompilation: no
-Packaged: 2017-10-18 13:29:51 UTC; atorres
+Packaged: 2018-03-02 15:43:51 UTC; atorres

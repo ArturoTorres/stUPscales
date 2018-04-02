@@ -113,7 +113,7 @@ setMethod("MC.calibra", signature = c("list", "inputObs", "numeric"),
                                        ifelse(length(MC_setup[["par"]][["NH4r"]]) > 1, NH4ri <- sample(MC_setup[["par"]][["NH4r"]][i,],1), NH4ri <- MC_setup[["par"]][["NH4r"]][1])
                                        
                                        input.user <- input(spatial = 0, zero = 1e-5, folder = system.file("shiny", package = "EmiStatR"),
-                                                           folderOutput = MC_setup[["folderOutput"]], cores = EmiStatR.cores,
+                                                           cores = EmiStatR.cores,
                                                            ww = list(qs = qsi, CODs = CODsi, NH4s = NH4si), 
                                                            inf = list(qf= qfi, CODf = CODfi, NH4f = NH4fi),
                                                            rw = list(CODr = CODri, NH4r = NH4ri, stat = "Goesdorf"), P1 = P1, 

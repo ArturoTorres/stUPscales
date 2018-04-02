@@ -6,8 +6,7 @@ setup <- setClass("setup",
                    ts.input  = "data.frame",
                    rng       = "list",
                    ar.model  = "list",
-                   var.model = "list",
-                   folderOutput = "character"),
+                   var.model = "list"),
                    
          prototype = list(id        = "MC_sim_1",
                           nsim      = 1,
@@ -16,6 +15,5 @@ setup <- setClass("setup",
                           ts.input  = NULL,
                           rng       = NULL,
                           ar.model  = list(NULL),
-                          var.model = list(NULL),
-                          folderOutput = "~/R-output ")
+                          var.model = list(NULL))
          )

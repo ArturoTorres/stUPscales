@@ -67,7 +67,7 @@ setMethod("MC.setup", signature = "setup",
             rng          <- slot(x, "rng")
             ar.model     <- slot(x, "ar.model")
             var.model    <- slot(x, "var.model")
-            folderOutput <- slot(x, "folderOutput")
+            # folderOutput <- slot(x, "folderOutput")
             
             #=============================================================================================
             # MC simulations and set-up
@@ -286,7 +286,7 @@ setMethod("MC.setup", signature = "setup",
             npars <- length(rng)
             
             return(list(id = id, nsim=nsim, seed=seed, mcCores = mcCores, ts.input=ts.input, rng=rng, par=par, 
-                        ar.model=ar.model, var.model=var.model, folderOutput=folderOutput, nsim.c6 = nsim.c6, 
+                        ar.model=ar.model, var.model=var.model, nsim.c6 = nsim.c6, 
                         id.c6 = id.c6))
           }
 )

@@ -1,5 +1,5 @@
-\name{Agg}
-\alias{Agg}
+\name{Agg.t}
+\alias{Agg.t}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{Temporal aggregation of environmental variables
 }
@@ -8,7 +8,7 @@
   \code{aggregate} from \code{stats} package.
 }
 \usage{
-  Agg(data, nameData, delta, func, namePlot)
+  Agg.t(data, nameData, delta, func, namePlot)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -17,7 +17,7 @@
     environmental variable to be aggregated, e.g. precipitation. This data.frame should have 
     at two columns: the first one, Time [y-m-d h:m:s]; the second one, a numeric value equal to the 
     magnitude of the environmental variable. If the environmental variable is different than precipitation,
-    then the column name of the values should be named as \code{value}.}
+    then the column name of the values can be named as the name of the variable itself.}
   \item{nameData}{
     A \code{character} string that defines the name of the environmental variable to be aggregated.}
   \item{delta}{
@@ -54,13 +54,13 @@
 \examples{
 
 ## temporal aggregation
-library(EmiStatR)
+library(stUPscales)
 data(P1)
 colnames(P1) <- c("time", "P1")
 head(P1)
 
 library(stUPscales)
-P1.agg <- Agg(data = P1, nameData = "P1", delta = 120 , func = sum, 
+P1.agg <- Agg.t(data = P1, nameData = "P1", delta = 120 , func = sum, 
               namePlot = "Temporal aggregation of precipitation P1")
 
 head(P1.agg)
@@ -70,6 +70,6 @@ tail(P1.agg)
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
 \keyword{Temporal aggregation}
-\keyword{Agg}
+\keyword{Agg.t}
 \keyword{Aggregation}
 %\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line

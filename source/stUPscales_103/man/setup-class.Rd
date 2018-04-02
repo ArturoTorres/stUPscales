@@ -52,8 +52,6 @@ Objects can be created by calls of the form \code{setup()}.
     mAr.sim from the package mAr. The named variables in this slot should correspond to 
     a pdf nor in the slot rng. The current implementation considers the bi-variate case. See examples for 
     the definition of this slot. For mathemamtical details see Luetkepohl (2005).}
-    \item{\code{folderOutput}:}{Object of class \code{"character"} defining the working directory to save the 
-    outputs of the Monte Carlo simulation. This folder should already exist.}
   }
 }
 %\section{Methods}{
@@ -93,8 +91,7 @@ data(P1)
 
 ini <- setup(id = "MC_sim1", nsim = 500, seed = 123, mcCores = 1, ts.input = P1,
              rng = list(var1 = 150, var2 = c(pdf = "uni", min = 50, max = 110),
-                        var3 = c(pdf = "nor", mu = 90, sigma = 2.25)),
-             folderOutput = "~/r-output"
+                        var3 = c(pdf = "nor", mu = 90, sigma = 2.25))
 )
 
 str(ini)
@@ -107,8 +104,7 @@ data(P1)
 ini_ar <- setup(id = "MC_sim1_ar", nsim = 500, seed = 123, mcCores = 1, ts.input = P1,
                 rng = list(var1 = 150, var2 = c(pdf = "nor", mu = 150, sigma = 5),
                            var3 = c(pdf = "nor", mu = 90, sigma = 2.25)),
-                ar.model = ar.model <- list(var2 = 0.995, var3 = 0.460),
-                folderOutput = "~/r-output"
+                ar.model = ar.model <- list(var2 = 0.995, var3 = 0.460)
 )
 
 str(ini_ar)
@@ -124,8 +120,7 @@ ini_var <- setup(id = "MC_sim1_ar", nsim = 500, seed = 123, mcCores = 1, ts.inpu
                                                 A = matrix(c(0.992, -8.8e-05, -31e-4, 0.995), 
                                                 nrow=2, ncol=2),
                                                 C = matrix(c(0.0091, 0.0022, 0.0022, 0.0019), 
-                                                nrow=2, ncol=2)),
-                 folderOutput = "~/r-output"
+                                                nrow=2, ncol=2))
 )
 
 str(ini_var)
@@ -134,8 +129,7 @@ str(ini_var)
 \keyword{classes}
 \usage{
 setup(id = "MC_sim_1", nsim = 1, seed = 0.7010607, mcCores = 1, ts.input = NULL,
-      rng = NULL, ar.model  = list(NULL), var.model = list(NULL), 
-      folderOutput = "~/R-output ")
+      rng = NULL, ar.model  = list(NULL), var.model = list(NULL))
          
 }
 %\arguments{

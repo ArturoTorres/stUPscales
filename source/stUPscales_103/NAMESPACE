@@ -1,6 +1,6 @@
 exportPattern("^[[:alpha:]]+")
 
-export("Agg", "GoF", "PlotEval")
+export("Agg.t", "GoF", "IsReg.ts", "PlotEval", "PlotMC.event")
 
 exportMethods(
     "MC.setup", "MC.calibra", "Validation_Quantity" 
@@ -11,11 +11,8 @@ import(stats)
 import(graphics)
 import(grDevices)
 import(utils)
-import(data.table)
-import(xts)
 import(mAr)
 import(lmom)
-import(EmiStatR)
 
 importFrom(parallel, detectCores, stopCluster, makeCluster, makePSOCKcluster)
 importFrom(doParallel, registerDoParallel)
@@ -26,3 +23,5 @@ importFrom(ggplot2, ggplot, aes, geom_line, geom_ribbon, theme, theme_bw, elemen
 importFrom(moments, skewness)
 importFrom(hydroGOF, gof)
 importFrom(zoo, plot.zoo, is.regular)
+importFrom(data.table, data.table, setkey)
+importFrom(xts, as.xts)

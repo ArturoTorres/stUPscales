@@ -8,9 +8,10 @@
 # setGeneric("MC.analysis", function(x, delta, qUpper, p1.det, sim.det, event.ini, event.end, ntick, summ) standardGeneric("MC.analysis"))
 # setMethod("MC.analysis", signature = c("list", "numeric", "character", "data.frame", "list", "POSIXct", "POSIXct", "numeric", "list"), 
 
-MC.analysis <- function(x, delta, qUpper, p1.det, sim.det, event.ini, event.end, ntick, summ.data = NULL){
+MC.analysis <- function(x, delta, qUpper, p1.det, sim.det, 
+                        event.ini, event.end, ntick, summ.data = NULL){
   # x <- sims
-  
+
   # delta <- 2*60    # 2 hours 
   # delta <- 1*60/6 # 10 minutes 
   # delta <- 1      # 1 minutes 
@@ -174,8 +175,9 @@ MC.analysis <- function(x, delta, qUpper, p1.det, sim.det, event.ini, event.end,
   V.event.agg <- MC.summary.agg(V.event, det.event, delta, mean, sum)
   
   namePlot.VChamberV <- "VChamber_Vsv_MC-uncertainty"; ylab="V chamber [m3]"; ylab1="V overflow [m3]"
-  PlotMC.event(VChamber.event.agg, V.event.agg, 0, det.var[1], det.var[2], paste(namePlot.VChamberV, "_", round(delta, 0), "min", sep=""), 
-               ylab, ylab1, ntick, qUpper)
+  PlotMC.event(summ = VChamber.event.agg, summ1 = V.event.agg, obs = 0, det.var = det.var[1], det.var1 = det.var[2], 
+               namePlot = paste(namePlot.VChamberV, "_", round(delta, 0), "min", sep=""), 
+               ylab = ylab, ylab1 = ylab1, ntick = ntick, qUpper = qUpper)
   
   # ## Qsv
   # if(summ == NULL){

@@ -15,7 +15,7 @@
 # delta    <- 10
 # func     <- "mean"
 
-Agg <- function(data, nameData, delta, func, namePlot){
+Agg.t <- function(data, nameData, delta, func, namePlot){
   # data <- var; nameData <- var.name; delta <- 60; func <- "mean"; namePlot <- "hourly"
   # data <- wlt_obs; nameData <- "wlt_obs"; delta <- 1; func <- "mean"; namePlot <- "test"
   #---------------------------------------------------------------------------------------------------------
@@ -49,21 +49,21 @@ Agg <- function(data, nameData, delta, func, namePlot){
     return(P1)
   }else{
     obs <- data
-    ts <- aggregate(data$value, list(bucket), func)
+    ts <- aggregate(data[-1], list(bucket), func)
     
     pdf(paste(namePlot, ".pdf", sep=""), pointsize=10)
     par(mfrow = c(2,1))
     par(cex.lab=1, cex.axis=1., cex.main = 1.5)
     # length(obs$time); length(obs$value)
     # plot(obs$tt,obs$value, type="l", main="Original time series", xlab = "Time", ylab = nameData)#------ commented after MC set-up
-    plot(obs[,1],obs$value, type="l", main="Original time series", xlab = "Time", ylab = nameData)#------ commented after MC set-up
-    plot(ts[,1],ts$x, type="l", main=namePlot, xlab = "Time", ylab = nameData)
+    plot(obs[,1],obs[,2], type="l", main="Original time series", xlab = "Time", ylab = nameData)#------ commented after MC set-up
+    plot(ts[,1],ts[,2], type="l", main=namePlot, xlab = "Time", ylab = nameData)
     dev.off()
     
-    colnames(ts) <- c("time", "value")
-    obs <- ts
+    colnames(ts) <- c("time", colnames(obs)[-1])
+    aggregated <- ts
     #save(obs, file="obs.RData")
     
-    return(obs)
+    return(aggregated)
   }
 }

@@ -83,8 +83,6 @@ plot(P1[,2], typ="l")
 
 library(stUPscales)
 
-folderOutput <- tempdir()
-
 setting_EmiStatR <-  setup(id       = "MC_sim1",
                            nsim     = 5,
                            seed     = 123, 
@@ -130,8 +128,7 @@ setting_EmiStatR <-  setup(id       = "MC_sim1",
                              A       = matrix(c(9.916452e-01, -8.755558e-05, 
                                                 -0.003189094, 0.994553910), nrow=2, ncol=2),
                              C       = matrix(c(0.009126591, 0.002237936, 
-                                                0.002237936, 0.001850941), nrow=2, ncol=2)),
-                           folderOutput = folderOutput)
+                                                0.002237936, 0.001850941), nrow=2, ncol=2)))
 
 MC_setup <- MC.setup(setting_EmiStatR)
 

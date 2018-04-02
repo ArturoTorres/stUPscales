@@ -17,8 +17,8 @@ The DESCRIPTION file:
 \tabular{ll}{
 Package: \tab stUPscales  \cr
 Type:    \tab Package   \cr
-Version: \tab 1.0.2       \cr
-Date:    \tab 2017-10-04\cr
+Version: \tab 1.0.3       \cr
+Date:    \tab 2018-03-02\cr
 License: \tab GPL (>= 3)\cr
 Depends: \tab R (>= 2.10), methods, mAr, data.table, lmom, xts \cr
 }

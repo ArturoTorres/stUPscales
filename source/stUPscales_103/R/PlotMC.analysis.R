@@ -1,6 +1,7 @@
 # Monte-Carlo simulations analysis (plot)
 # author: J.A. Torres-Matallana
-# organization: LIST
+# organization: Luxembourg Institute of Science and technology (LIST)
+#               Wagenigen University and Research Centre (WUR)
 # date: 17.10.2015 - 16.05.2016
 
 PlotMC.event <- function(summ, summ1, obs, det.var, det.var1, namePlot, ylab, ylab1, ntick, qUpper){
@@ -18,26 +19,27 @@ PlotMC.event <- function(summ, summ1, obs, det.var, det.var1, namePlot, ylab, yl
   par(mar = c(4, 7, 1, 6), cex.axis=1.5, cex.lab=1.5, cex.main=2)
   x <- 1:dim(summ)[1]
   ylim <- c(0, max(max(summ[[qUpper]]), max(summ["Mean"], summ[det.var])))
-  plot(x, t(summ["q05"]), typ="l", ylim=ylim, col="grey90", xlab="", ylab=ylab, xaxt="n")
-  lines(x, t(summ[[qUpper]]), typ="l", col="grey90")
-  polygon(c(x, rev(x)), c(t(summ[[qUpper]]), rev(t(summ["q05"]))), col = "grey70", border = NA)
+  plot(x, t(summ["q05"]), typ="l", ylim=ylim, col="grey83", xlab="", ylab=ylab, xaxt="n")
+  lines(x, t(summ[[qUpper]]), typ="l", col="grey83")
+  polygon(c(x, rev(x)), c(t(summ[[qUpper]]), rev(t(summ["q05"]))), col = "grey83", border = NA)
   #polygon(c(x, rev(x)), c(t(summ["q75"]), rev(t(summ["q25"]))), col = "grey50", border = NA)
   lines((summ["Mean"]), typ = "l", col="black", lty="dashed", lwd=2)
   lines((summ[det.var]), typ = "l", col="blue", lty="solid", lwd=2)
+  
   legend("topright", legend = c("Deterministic simulation",
-         "Mean MC simulation", "Confidence interval"),
+                                "Mean MC simulation", "Confidence interval"),
          lty=c(1,2,1), col=c("blue", "black", "grey60"), lwd = c(1,1,10), cex=1.5, bty = "n") # "bottomright" "bottomleft"
   # legend("top", c(paste("sum mean =", floor(sum(summ["Mean"],na.rm = T)), sep=" "), 
   #        paste("sum det =", floor(sum(summ[det.var],na.rm = T)), sep=" "), 
   #        paste("diff =", floor(sum(summ["Mean"],na.rm = T) - sum(summ[det.var],na.rm = T)), sep=" ")), 
   #        lty=NULL, col=c("white"), cex=1.5, bty = "n") # "bottomright" "bottomleft"
-
+  
   par(mar = c(5, 7, 0, 6), cex.axis=1.5, cex.lab=1.5, cex.main=2)
   x <- 1:dim(summ1)[1]
   ylim <- c(0, max(max(summ1[[qUpper]]), max(summ1["Mean"], summ1[det.var1])))
-  plot(x, t(summ1["q05"]), typ="l", ylim=ylim, col="grey90", xlab="Time [month-day hour:min]", ylab=ylab1, xaxt="n")
-  lines(x, t(summ1[[qUpper]]), typ="l", col="grey90")
-  polygon(c(x, rev(x)), c(t(summ1[[qUpper]]), rev(t(summ1["q05"]))), col = "grey70", border = NA)
+  plot(x, t(summ1["q05"]), typ="l", ylim=ylim, col="grey83", xlab="Time [month-day hour:min]", ylab=ylab1, xaxt="n")
+  lines(x, t(summ1[[qUpper]]), typ="l", col="grey83")
+  polygon(c(x, rev(x)), c(t(summ1[[qUpper]]), rev(t(summ1["q05"]))), col = "grey83", border = NA)
   #polygon(c(x, rev(x)), c(t(summ1["q75"]), rev(t(summ1["q25"]))), col = "grey50", border = NA)
   lines((summ1["Mean"]), typ = "l", col="black", lty="dashed", lwd=2)
   lines((summ[det.var1]), typ = "l", col="blue", lty="solid", lwd=2)
@@ -57,8 +59,8 @@ PlotMC.event <- function(summ, summ1, obs, det.var, det.var1, namePlot, ylab, yl
   axis(side=1, at=x[ix], labels=labels[ix], cex=1.5, cex.axis=1.5)
   
   if(obs == 0){
-  #  legend("topright", legend=c("q5-q95 confidence interval", "q25-q75 condifence interval", "Mean"), 
-   #        fill=c("grey90", "grey70", "blue", "blue"), cex=2)
+    #  legend("topright", legend=c("q5-q95 confidence interval", "q25-q75 condifence interval", "Mean"), 
+    #        fill=c("grey90", "grey70", "blue", "blue"), cex=2)
   }else{
     #       lines(obs, typ = "p", col="blue", pch=22, bg="blue", cex=1.0)
     #       legend("topright", legend=c("q5-q95 confidence interval", "q25-q75 condifence interval",
@@ -71,7 +73,6 @@ PlotMC.event <- function(summ, summ1, obs, det.var, det.var1, namePlot, ylab, yl
   #dev.copy(png, filename=paste(namePlot, ".png", sep=""), res=600, height=10, width=10, units="in")
   dev.off()
 }
-
 
 PlotMC.season <- function(summ1, namePlot, ylab, qUpper){
   #summ1 <- summ.agg
