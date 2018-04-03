@@ -154,7 +154,7 @@ library(EmiStatR)
 
 input.det <- input(spatial = 0, zero = 1e-5, 
                     folder = system.file("shiny", package = "EmiStatR"),
-                    folderOutput =folderOutput, cores = 0,
+                    cores = 0,
                     ww = list(qs = 150, CODs = 104, NH4s = 4.7),
                     inf = list(qf= 0.04, CODf = 0, NH4f = 0),
                     rw = list(CODr = 71, NH4r = 1, stat = "Dahl"),
