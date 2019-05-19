@@ -11,7 +11,7 @@ in 25 rain gauge stations distributed over the territory of the Grand-Duchy of L
 \usage{data("Lux_precipitation_2010_2011")}
 \format{
   The format is:\cr
-An ‘xts’ object on 2010-01-01/2011-12-31 23:50:00 containing:\cr
+An 'xts' object on 2010-01-01/2011-12-31 23:50:00 containing:\cr
   Data: num [1:105120, 1:25] 0 0 0 0 0 0 0 0 0 0 ...\cr
  - attr(*, "dimnames")=List of 2\cr
   ..$ : NULL\cr
@@ -20,15 +20,15 @@ An ‘xts’ object on 2010-01-01/2011-12-31 23:50:00 containing:\cr
   xts Attributes:  \cr
  NULL\cr
 }
-\details{
+%\details{
 %%  ~~ If necessary, more details than the __description__ above ~~
-}
+%}
 \source{
 \url{http://agrimeteo.lu/}
 }
-\references{
+%\references{
 %%  ~~ possibly secondary sources and usages ~~
-}
+%}
 \examples{
 library(stUPscales)
 data(Lux_precipitation_2010_2011)

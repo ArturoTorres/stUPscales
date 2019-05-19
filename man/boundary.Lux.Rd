@@ -47,6 +47,8 @@ Formal class 'SpatialPolygonsDataFrame' [package "sp"] with 5 slots\cr
 %%%  ~~ possibly secondary sources and usages ~~
 %}
 \examples{
+library(stUPscales)
+
 data(Lux_boundary)
 
 str(boundary.Lux)

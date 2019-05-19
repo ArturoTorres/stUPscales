@@ -1,11 +1,12 @@
-# stUPscales
-Spatio-temporal Uncertainty Propagation across multiple scales
+# Uncert-opt-comp
+ Uncertainty and optimal complexity R package
+ 
+ Copyright 2010 - 2019 Luxembourg Institute of Science and Technology.
 
-# License
 
-Copyright 2018 Luxembourg Institute of Science and Technology. All rights reserved. Any use of this software constitutes full acceptance of all terms of the software's license. The project is protected by GPL. See license file for further infos.
+This is a collection of R routines for Arturo's thesis. This might be devided/merged into other R packages later.
 
-# What is new!
+What is new!
 
 AggProp package:
   - 2016-10-22, version 1.0: 
@@ -26,4 +27,7 @@ stUPscales package:
   - 2018-06-11, version 1.0.3.1: Namespace file updated to export parallel functions
   - 2018-07-04, version 1.0.3.2: Removed function Level2Volume and corresponding author contribution
   - 2018-08-09, version 1.0.3.3: Edited package description (more environmental models approach)
-  - 2018-08-20, version 1.0.3.4: Added new datasets from DWD and ASTA
+  - 2019-05-04, version 1.0.3.4: Added new datasets from DWD and ASTA; added MC.analysis_generic function (14.02.2019). 
+                                 Checked to work seamlessly with EmiStatR_1.2.2.0 (staged-install).
+
+

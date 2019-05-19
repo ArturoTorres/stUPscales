@@ -35,24 +35,25 @@ Formal class 'SpatialPointsDataFrame' [package "sp"] with 5 slots\cr
   ..@ proj4string:Formal class 'CRS' [package "sp"] with 1 slot\cr
   .. .. ..@ projargs: chr "+init=epsg:2169 +proj=tmerc +lat_0=49.83333333333334 +lon_0=6.166666666666667 +k=1 +x_0=80000 +y_0=100000 +ellp"| __truncated__\cr
 }
-\details{
+%\details{
 %%  ~~ If necessary, more details than the __description__ above ~~
-}
+%}
 \source{
 \url{https://www.dwd.de/}
 }
-\references{
+%\references{
 %%  ~~ possibly secondary sources and usages ~~
-}
+%}
 \examples{
 library(stUPscales)
+library(sp)
+
 data(Germany_stations)
 
 str(Germany_stations)
 
-library(sp)
 data(Lux_boundary)
 plot(Germany_stations)
-plot(boundary.Lux, add=T) # Luxembourg boundary
+plot(boundary.Lux, add=TRUE) # Luxembourg boundary
 }
 \keyword{datasets}
