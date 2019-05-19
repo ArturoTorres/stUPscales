@@ -1,8 +1,8 @@
 Package: stUPscales
 Type: Package
 Title: Spatio-Temporal Uncertainty Propagation Across Multiple Scales
-Version: 1.0.3.4
-Date: 2019-05-04
+Version: 1.0.3.5
+Date: 2019-05-19
 Author: J.A. Torres-Matallana [aut, cre]
     U. Leopold [ctb]
     G.B.M. Heuvelink [ctb]
@@ -23,7 +23,7 @@ Description: Integrated environmental modelling requires coupling sub-models at
     variables. Due to its modularity, the package allows the implementation of additional 
     methods and functions for spatio-temporal disaggregation of model inputs and outputs, 
     when linking models across multiple space-time scales.  
-License: GPL (>=3)
+License: GPL (>=3) + file LICENSE
 Depends: 
         R (>= 2.10),
 	methods,
@@ -48,4 +48,4 @@ Imports:
 	EmiStatR
 Suggests: sp, spacetime
 NeedsCompilation: no
-Packaged: 2019-05-03 18:54:51 UTC; atorres
+Packaged: 2019-05-19 13:35:51 UTC; atorres

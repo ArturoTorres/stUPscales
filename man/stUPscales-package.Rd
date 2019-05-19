@@ -11,9 +11,9 @@ The DESCRIPTION file:
 \tabular{ll}{
 Package: \tab stUPscales  \cr
 Type:    \tab Package     \cr
-Version: \tab 1.0.3.4     \cr
-Date:    \tab 2019-05-04  \cr
-License: \tab GPL (>= 3)  \cr
+Version: \tab 1.0.3.5     \cr
+Date:    \tab 2019-05-19  \cr
+License: \tab GPL (>= 3) + file LICENSE  \cr
 Depends: \tab R (>= 2.10), methods, stats, graphics, grDevices, utils, mAr, lmom \cr
 Imports: \tab parallel, doParallel, foreach, lattice, msm, ggplot2, moments, hydroGOF, zoo, data.table, xts, EmiStatR \cr
 Suggests: \tab sp, spacetime \cr
