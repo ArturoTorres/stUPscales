@@ -1,5 +1,5 @@
-# Uncert-opt-comp
- Uncertainty and optimal complexity R package
+# stUPscales
+ Spatio-Temporal Uncertainty Propagation Across Multiple Scales - R package
  
  Copyright 2010 - 2019 Luxembourg Institute of Science and Technology.
 
@@ -29,5 +29,6 @@ stUPscales package:
   - 2018-08-09, version 1.0.3.3: Edited package description (more environmental models approach)
   - 2019-05-04, version 1.0.3.4: Added new datasets from DWD and ASTA; added MC.analysis_generic function (14.02.2019). 
                                  Checked to work seamlessly with EmiStatR_1.2.2.0 (staged-install).
+  - 2019-05-30, version 1.1.0.0: Included new implementations (by Ben) for data preparation of radar iamgery from DWD and precipitation gauge data. Created functions Correct.radar, IsReg.files, Smooth.ts and xts2STFDF. 
 
 

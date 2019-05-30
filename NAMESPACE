@@ -1,6 +1,7 @@
 exportPattern("^[[:alpha:]]+")
 
-export("Agg.t", "GoF", "IsReg.ts", "PlotEval", "PlotMC.event")
+export("Agg.t", "GoF", "IsReg.ts", "PlotEval", "PlotMC.event", "Correct.radar",
+	"IsReg.files", "Smooth.ts", "xts2STFDF")
 
 exportMethods("MC.setup", "MC.calibra", "Validation_Quantity")
 
@@ -23,7 +24,10 @@ importFrom(msm, rtnorm)
 importFrom(ggplot2, ggplot, aes, geom_line, geom_ribbon, theme, theme_bw, element_text) 
 importFrom(moments, skewness)
 importFrom(hydroGOF, gof)
-importFrom(zoo, plot.zoo, is.regular)
+importFrom(zoo, plot.zoo, is.regular, index, coredata)
 importFrom(data.table, data.table, setkey, .SD)
-importFrom(xts, as.xts)
+importFrom(xts, as.xts, xts)
 importFrom(EmiStatR, EmiStatR, input, Level2Volume)
+importFrom(rgdal, readGDAL)
+importFrom(hexbin, hexbin)
+importFrom(spacetime, STFDF, stplot, na.locf, geometry)

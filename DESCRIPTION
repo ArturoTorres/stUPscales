@@ -1,8 +1,8 @@
 Package: stUPscales
 Type: Package
 Title: Spatio-Temporal Uncertainty Propagation Across Multiple Scales
-Version: 1.0.3.5
-Date: 2019-05-19
+Version: 1.1.0.0
+Date: 2019-05-30
 Author: J.A. Torres-Matallana [aut, cre]
     U. Leopold [ctb]
     G.B.M. Heuvelink [ctb]
@@ -10,20 +10,20 @@ Maintainer: J.A. Torres-Matallana <arturo.torres@list.lu>
 Description: Integrated environmental modelling requires coupling sub-models at 
     different spatial and temporal scales, thus accounting for change of support 
     procedures (aggregation and disaggregation). We contribute to state-of-the-art 
-    open source tools that support uncertainty propagation analysis in temporal and 
+    open source tools that support uncertainty propagation analysis in temporal and
     spatio-temporal domains. We implement the tool for uncertainty propagation in 
     environmental modelling, with examples in the urban water domain. 
-    The functionalities of the class setup and the methods and functions MC.setup, 
-    MC.sim, MC.analysis, MC.analysis_generic and Agg.t are contained, which are used for setting up, 
-    running and analysing Monte Carlo uncertainty propagation simulations, and for 
-    spatio-temporal aggregation. We also implement functionalities to model and predict 
-    variables that vary in space and time. stUPscales takes uncertainty characterisation 
-    and propagation a step further by including temporal and spatio-temporal auto- and
-    cross-correlation, resulting in more realistic (spatio-)temporal series of environmental 
-    variables. Due to its modularity, the package allows the implementation of additional 
-    methods and functions for spatio-temporal disaggregation of model inputs and outputs, 
-    when linking models across multiple space-time scales.  
-License: GPL (>=3) + file LICENSE
+    The main functionalities of the class setup and the methods and functions MC.setup, 
+    MC.sim, MC.analysis, MC.analysis_generic and Agg.t are contained, which are used 
+    for setting up, running and analysing Monte Carlo uncertainty propagation simulations, 
+    and for spatio-temporal aggregation. We also implement functionalities to model and 
+    predict variables that vary in space and time. stUPscales takes uncertainty 
+    characterisation and propagation a step further by including temporal and spatio-
+    temporal auto- and cross-correlation, resulting in more realistic (spatio-)temporal 
+    series of environmental variables. Due to its modularity, the package allows the 
+    implementation of additional methods and functions for spatio-temporal disaggregation 
+    of model inputs and outputs, when linking models across multiple space-time scales.  
+License: GPL (>=3)
 Depends: 
         R (>= 2.10),
 	methods,
@@ -45,7 +45,10 @@ Imports:
 	zoo,
 	data.table,
 	xts,
-	EmiStatR
-Suggests: sp, spacetime
+	EmiStatR,
+	rgdal,
+	hexbin,
+	spacetime
+Suggests: sp
 NeedsCompilation: no
-Packaged: 2019-05-19 13:35:51 UTC; atorres
+Packaged: 2019-05-30 12:45 UTC; atorres

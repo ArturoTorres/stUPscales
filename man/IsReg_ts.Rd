@@ -4,7 +4,7 @@
 Wrapper function for function \code{is.regular} from \code{zoo} package for \code{data.frame} objects
 }
 \description{
-"IsReg.ts" is a wrapping Function for Function "is.regular" from "zoo" package. Given a time series (ts) a  "data.frame" object it is converted into a "xts" object, while the regularity of the object is checked. The first column of the "data.frame" should contain a character string vector to be converted via as.POSIXct 
+"IsReg.ts" is a wrapping Function for Function "is.regular" from "zoo" package. Given a time series (ts) as a  "data.frame" object, it is converted into a "xts" object, while the regularity of the object is checked. The first column of the "data.frame" should contain a character string vector to be converted via as.POSIXct 
 accordingly with the date format (format) and time zone (tz). 
 
 }
@@ -61,4 +61,4 @@ plot(ts[[2]], ylab = "Precipitation [mm]")
 }
 
 \keyword{IsReg.ts }
-\keyword{Is a time series regular}
+\keyword{Time series}
