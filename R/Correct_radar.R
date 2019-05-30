@@ -70,9 +70,8 @@ Correct.radar <- function(path.calibrated, path.non.calibrated, time.ini.calib,
   ## disaggreagte 1h calibrated to 10 calibrated proxies   # TODO: generic disaggregation
   imgSum <- apply(imgVals, 1, mean)
 
-  dev.off()
-  # plot(imgSum, imgCalibrated$band1)
-  plot(hexbin(imgSum, imgCalibrated$band1))
+  plot(imgSum, imgCalibrated$band1)
+  # plot(hexbin(imgSum, imgCalibrated$band1))
 
   imgRate <- imgCalibrated$band1/imgSum
   

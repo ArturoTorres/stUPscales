@@ -47,7 +47,6 @@ Imports:
 	xts,
 	EmiStatR,
 	rgdal,
-	hexbin,
 	spacetime
 Suggests: sp
 NeedsCompilation: no

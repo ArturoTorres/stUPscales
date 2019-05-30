@@ -31,7 +31,7 @@ Date:    \tab 2019-05-30  \cr
 License: \tab GPL (>= 3)  \cr
 Depends: \tab R (>= 2.10), methods, stats, graphics, grDevices, utils, mAr, lmom \cr
 Imports: \tab parallel, doParallel, foreach, lattice, msm, ggplot2, moments, hydroGOF, zoo, data.table,\cr 
-         \tab xts, EmiStatR, rgdal, hexbin, spacetime \cr
+         \tab xts, EmiStatR, rgdal, spacetime \cr
 Suggests: \tab sp\cr
 }
 }
