@@ -14,7 +14,7 @@
 \arguments{
   \item{x}{
     A \code{list} of 1, which contains the output of the Monte Carlo simulation as 
-    a data.frame with n rows as time steps and the first column is time in format POSIXct and m columns named 1, 2, 3... m, where m is the number of Monte Carlo runs results.}
+    a data.frame with n rows as time steps and the first column is time in format POSIXct and m columns named e.g. V1, V2, V3... Vm, where m is the number of Monte Carlo runs results.}
   \item{delta}{
     A \code{numeric} value that specifies the level of aggregation required in minutes.}
   \item{qUpper}{

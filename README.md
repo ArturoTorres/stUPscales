@@ -27,8 +27,10 @@ stUPscales package:
   - 2018-06-11, version 1.0.3.1: Namespace file updated to export parallel functions
   - 2018-07-04, version 1.0.3.2: Removed function Level2Volume and corresponding author contribution
   - 2018-08-09, version 1.0.3.3: Edited package description (more environmental models approach)
-  - 2019-05-04, version 1.0.3.4: Added new datasets from DWD and ASTA; added MC.analysis_generic function (14.02.2019). 
+  - 2019-05-04, version 1.0.3.4: Added new datasets from DWD and ASTA; added MC.analysis_generic function (14.02.2019). In CRAN.
                                  Checked to work seamlessly with EmiStatR_1.2.2.0 (staged-install).
-  - 2019-05-30, version 1.1.0.0: Included new implementations (by Ben) for data preparation of radar iamgery from DWD and precipitation gauge data. Created functions Correct.radar, IsReg.files, Smooth.ts and xts2STFDF. 
-
+  - 2019-05-30, version 1.0.4.0: Included new implementations (by Benedikt) for data preparation of radar
+  imagery from DWD and precipitation gauge data. Created functions Correct.radar, IsReg.files, Smooth.ts and
+  xts2STFDF. Removed routine for plotting inside Agg_t.R function. Edited DESCRIPTION file to renumber 
+  package version.
 

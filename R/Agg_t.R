@@ -52,14 +52,14 @@ Agg.t <- function(data, nameData, delta, func, namePlot){
     obs <- data
     ts <- aggregate(data[-1], list(bucket), func)
     
-    pdf(paste(namePlot, ".pdf", sep=""), pointsize=10)
-    par(mfrow = c(2,1))
-    par(cex.lab=1, cex.axis=1., cex.main = 1.5)
-    # length(obs$time); length(obs$value)
-    # plot(obs$tt,obs$value, type="l", main="Original time series", xlab = "Time", ylab = nameData)#------ commented after MC set-up
-    plot(obs[,1],obs[,2], type="l", main="Original time series", xlab = "Time", ylab = nameData)#------ commented after MC set-up
-    plot(ts[,1],ts[,2], type="l", main=namePlot, xlab = "Time", ylab = nameData)
-    dev.off()
+    # pdf(paste(namePlot, ".pdf", sep=""), pointsize=10)
+    # par(mfrow = c(2,1))
+    # par(cex.lab=1, cex.axis=1., cex.main = 1.5)
+    # # length(obs$time); length(obs$value)
+    # # plot(obs$tt,obs$value, type="l", main="Original time series", xlab = "Time", ylab = nameData)#------ commented after MC set-up
+    # plot(obs[,1],obs[,2], type="l", main="Original time series", xlab = "Time", ylab = nameData)#------ commented after MC set-up
+    # plot(ts[,1],ts[,2], type="l", main=namePlot, xlab = "Time", ylab = nameData)
+    # dev.off()
     
     colnames(ts) <- c("time", colnames(obs)[-1])
     aggregated <- ts
