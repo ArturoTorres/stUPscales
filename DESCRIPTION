@@ -1,8 +1,8 @@
 Package: stUPscales
 Type: Package
 Title: Spatio-Temporal Uncertainty Propagation Across Multiple Scales
-Version: 1.0.4.0
-Date: 2019-05-30
+Version: 1.0.5.0
+Date: 2019-06-28
 Author: J.A. Torres-Matallana [aut, cre]
     U. Leopold [ctb]
     G.B.M. Heuvelink [ctb]
