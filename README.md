@@ -33,6 +33,7 @@ stUPscales package:
   imagery from DWD and precipitation gauge data. Created functions Correct.radar, IsReg.files, Smooth.ts and
   xts2STFDF. Removed routine for plotting inside Agg_t.R function. Edited DESCRIPTION file to renumber 
   package version.
-  - 2019-06-28, version 1.0.5.0: Included added MC.summary.output.R file for MC summary, estimation and 
+  - 2019-06-28, version 1.0.5.0: Added MC.summary.output.R file for MC summary, estimation and 
   standard errors according to Dennis Boos.
+  - 2019-11-12, version 1.0.5.0: Added Create.grid.R file for Create.grid function.
 

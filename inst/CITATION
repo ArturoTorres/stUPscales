@@ -1,0 +1,32 @@
+citHeader("To cite stUPscales in publications use:")
+
+citEntry(entry = "Article",
+  title        = "{stUPscales}: An R-Package for Spatio-Temporal Uncertainty Propagation across Multiple Scales with Examples in Urban Water Modelling",
+  author       = "J.A. Torres-Matallana and U. Leopold and G.B.M. Heuvelink",
+  journal      = "Water",
+  year         = "2018",
+  volume       = "10(7)",
+  number       = "837",
+  pages        = "1--30",
+  url          = "https://www.mdpi.com/2073-4441/10/7/837",
+
+  textVersion  =
+  paste("J.A. Torres-Matallana and U. Leopold and G.B.M. Heuvelink (2018).",
+        "stUPscales: An R-Package for Spatio-Temporal Uncertainty Propagation across Multiple Scales with Examples in Urban Water Modelling.",
+        "Water, 10(7), 837, 1-30.",
+        "URL https://www.mdpi.com/2073-4441/10/7/837.")
+)
+
+citEntry(entry = "Manual",
+  title        = "{stUPscales}: Spatio-Temporal Uncertainty Propagation Across Multiple Scales",
+  author       = "J.A. Torres-Matallana and U. Leopold and G.B.M. Heuvelink",
+  year         = "2019",
+  note         = "R package version 1.0.5.0",
+  url          = "https://CRAN.R-project.org/package=stUPscales",
+
+  textVersion  =
+  paste("J.A. Torres-Matallana and U. Leopold and G.B.M. Heuvelink (2019).",
+        "stUPscales: Spatio-Temporal Uncertainty Propagation Across Multiple Scales.",
+        "R package version 1.0.5.0.",
+        "URL https://CRAN.R-project.org/package=stUPscales.")
+)
