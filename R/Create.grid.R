@@ -12,11 +12,11 @@
 #'
 #' @param bbox bunding box for the grid. A 2x2 matrix with first row equal to c(x_min, x_max) and
 #' second row equal to  c(y_min, y_max).
-#' @param proj spatial projection of the grid to be created in metres.
+#' @param proj geographical projection of the grid to be created in metres.
 #' @param cell.size cell size for the grid to be created in units consistent with the 'proj' argument.
 #' Should be in metres.
 #'
-#' @return 
+#' @return the grid as a SpatialPolygonsDataFrame object.
 #'
 #' @importFrom "rgdal" "readOGR"
 #' @importFrom "raster" "extent"
