@@ -1,7 +1,7 @@
 exportPattern("^[[:alpha:]]+")
 
 export("Agg.t", "GoF", "IsReg.ts", "PlotEval", "PlotMC.event", "Correct.radar",
-	"IsReg.files", "Smooth.ts", "xts2STFDF")
+	"IsReg.files", "Smooth.ts", "xts2STFDF", "Create.grid", "Subset.stfdf")
 
 exportMethods("MC.setup", "MC.calibra", "Validation_Quantity")
 
