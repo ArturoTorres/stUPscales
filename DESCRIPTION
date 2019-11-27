@@ -26,28 +26,31 @@ Description: Integrated environmental modelling requires coupling sub-models at
 License: GPL (>=3)
 Depends: 
         R (>= 2.10),
-	methods,
-	stats,
 	graphics,
 	grDevices,
-	utils, 
 	mAr, 
+	methods,
 	lmom,
+	stats,
+	utils, 
 Imports: 
-    	parallel,
-    	doParallel,
-	foreach,
-    	lattice,
-	msm,
-	ggplot2,
-	moments,
-	hydroGOF,
-	zoo,
 	data.table,
-	xts,
+	DescTools,
+    	doParallel,
 	EmiStatR,
+	foreach,
+	gstat,
+	ggplot2,
+	hydroGOF,
+   	lattice,
+	moments,
+	msm,
+    	parallel,
+	raster,
 	rgdal,
-	spacetime
-Suggests: sp
+	sp,
+	spacetime,
+	xts,
+	zoo
 NeedsCompilation: no
-Packaged: 2019-05-30 12:45 UTC; atorres
+Packaged: 2019-11-27 11:27 UTC; atorres

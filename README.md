@@ -36,4 +36,7 @@ stUPscales package:
   - 2019-06-28, version 1.0.5.0: Added MC.summary.output.R file for MC summary, estimation and 
   standard errors according to Dennis Boos.
   - 2019-11-12, version 1.0.5.0: Added Create.grid.R file for Create.grid function.
+  - 2019-11-25, version 1.0.5.0: Added Aux2Diss.R file for Create.grid, 
+  Subset.stfdf, Split.stfdf, Create.grid.split functions.
+  - 2019-11-26, version 1.0.5.0: Added Split.grid and krigeST.parallel functions.
 
