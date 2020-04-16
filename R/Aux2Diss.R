@@ -129,7 +129,7 @@ Create.grid <- function(bbox, proj, cell.size){
   pid500           <- sapply(slot(grid500.sp, "polygons"), 
                              function(x) slot(x, "ID"))
   
-  # Try coersion
+  # Try coercion
   grid500.sp       <- SpatialPolygonsDataFrame(Sr = grid500.sp, 
                                                data = data.frame(ID=1:length(grid500.sp), 
                                                                  row.names = pid500))
@@ -189,10 +189,9 @@ Create.grid.split <- function(stfdf_split, proj, cell.size){
 #' @export Split.grid
 
 Split.grid <- function(grid, n){
-  # coerce to SpatialPolygons
-  spPoly  <- as(grid, "SpatialPolygons")
-  plot(spPoly)
-  
+  # coerce to SpatialPoints
+  spPoints  <- as(grid, "SpatialPoints")
+
   # split in n tiles
   nsplit <- lapply(1:n, function(i){
     # n <- 68
@@ -201,6 +200,6 @@ Split.grid <- function(grid, n){
     
     # spliting by polygons
     # i <- 3
-    split_grid <- spPoly[(k*i - k + 1):(k*i)]
+    split_grid <- spPoints[(k*i - k + 1):(k*i)]
   })
 }

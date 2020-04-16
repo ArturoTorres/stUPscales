@@ -101,22 +101,26 @@ MC.se.boot <- function(X, theta, B, seed, ...){
 }
 
 #' Compute estimator and standard errors by bootstrap re-sampling
-MC.statistic <- function(mc, theta, trim, zero = 0, centered = FALSE, transform.n = 0, ...){
+MC.statistic <- function(mc, theta, trim = NULL, zero = NULL, centered = FALSE, transform.n = NULL, ...){
   # estimate
-  x <- mc[1,]
-  length(x)
+  # x <- mc[1,]
+  # length(x)
   est <- apply(mc, 1, function(x) {
     # filter zero values
-    x.nonzero <- x[x > zero]
+    if (is.null(zero)){x.nonzero <- x} else x.nonzero <- x[x > zero]
     
     # trim
-    x.trimmed <- Trim(x = sort(x.nonzero), trim = trim)
-    n         <- length(x.trimmed)
+    if (is.null(trim)){x.trimmed <- x.nonzero
+    } else {x.trimmed <- Trim(x = sort(x.nonzero), trim = trim)
+            }
+    n <- length(x.trimmed)
     
     # # centered (substract mean)
-    if(centered) x.trimmed <- x.trimmed - mean(x.trimmed)
+    if(centered) {
+      x.trimmed <- x.trimmed - mean(x.trimmed)}
     # if(transform.n != 0) x.trimmed <- (log(x.trimmed))^transform.n
-    if(transform.n != 0) x.trimmed <- x.trimmed^transform.n
+    if(is.null(transform.n) == FALSE) {
+      x.trimmed <- x.trimmed^transform.n}
     
     # estimate
     if(identical(attributes(theta), attributes(CV_BC))){
