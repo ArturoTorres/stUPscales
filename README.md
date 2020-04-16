@@ -39,4 +39,5 @@ stUPscales package:
   - 2019-11-25, version 1.0.5.0: Added Aux2Diss.R file for Create.grid, 
   Subset.stfdf, Split.stfdf, Create.grid.split functions.
   - 2019-11-26, version 1.0.5.0: Added Split.grid and krigeST.parallel functions.
-
+  - 2020-04-13, version 1.0.5.0: Modified MC.estatistic function before HESS submission. 
+  Modified Split.grid and krigeST.parallel functions.
