@@ -113,7 +113,7 @@ MC.statistic <- function(mc, theta, trim = NULL, zero = NULL, centered = FALSE, 
     if (is.null(trim)){x.trimmed <- x.nonzero
     } else {x.trimmed <- Trim(x = sort(x.nonzero), trim = trim)
             }
-    n <- length(x.trimmed)
+    n1 <- length(x.trimmed)
     
     # # centered (substract mean)
     if(centered) {
@@ -124,8 +124,8 @@ MC.statistic <- function(mc, theta, trim = NULL, zero = NULL, centered = FALSE, 
     
     # estimate
     if(identical(attributes(theta), attributes(CV_BC))){
-      est <- data.frame(est = theta(x.trimmed, n = n, ...), n = n)
-    }else est <- data.frame(est = theta(x.trimmed, ...), n = n)
+      est <- data.frame(est = theta(x.trimmed, n = n1, ...), n = n1)
+    }else est <- data.frame(est = theta(x.trimmed, ...), n = n1)
     
     return(est)
     }) 
