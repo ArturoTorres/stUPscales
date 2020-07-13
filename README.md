@@ -41,3 +41,5 @@ stUPscales package:
   - 2019-11-26, version 1.0.5.0: Added Split.grid and krigeST.parallel functions.
   - 2020-04-13, version 1.0.5.0: Modified MC.estatistic function before HESS submission. 
   Modified Split.grid and krigeST.parallel functions.
+  - 2020-07-10, version 1.0.5.1: Removed EmiStatR dependency. TODO: check build.
+  Added Bbox.offset function in Aux2Diss.

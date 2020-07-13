@@ -3,7 +3,39 @@
 # author: J.A. Torres-Matallana
 # organization: Luxembourg Institute of Science and Technology (LIST), Belvaux, Luxembourg
 #               Wagenigen University and Research Centre (WUR), Wageningen, The Netherlands 
-# date: 12.11.2019 - 27.11.2019
+# date: 12.11.2019 - 12.07.2020
+
+#' Create an offset from a bounding box and convert to SpatialPolygon
+#'
+#' Given a bounding box and a offset distance, creates a SpatialPolygon
+#'
+#' @param bbox the bounding box to offset.
+#' @param offset the obset distance.
+#' @param sp.proj4string the proj4string definition for the SpatialPoyigon to create.
+#'
+#' @return a SpatialPolygons object which is the requested spatial offset from the bounding box.
+#'
+#' @importFrom "sp" "Polygon"
+#' @importFrom "sp" "SpatialPolygons"
+#' 
+#' @export Bbox.offset
+
+Bbox.offset <- function(bbox, offset, sp.proj4string){
+  bbox.x <- c(bbox[1,1]-offset, bbox[1,2]+offset)
+  bbox.y <- c(bbox[2,1]-offset, bbox[2,2]+offset)
+  
+  coords <- matrix(c(bbox.x[1], bbox.y[1],
+                     bbox.x[1], bbox.y[2],
+                     bbox.x[2], bbox.y[2],
+                     bbox.x[2], bbox.y[1],
+                     bbox.x[1], bbox.y[1]),
+                   ncol = 2, byrow = TRUE)
+  
+  p1 <- Polygon(coords)
+  ps1 <- SpatialPolygons(list(Polygons(list(p1), ID = 1)), proj4string=sp.proj4string)
+  
+  return(ps1)
+}
 
 #' Create a subset from a STFDF object
 #'
@@ -174,7 +206,6 @@ Create.grid.split <- function(stfdf_split, proj, cell.size){
   
   return(grids)  
 }
-
 
 #' Split a grid (SpatialPolygonsDataFrame) in space
 #'

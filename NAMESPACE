@@ -20,7 +20,6 @@ import(lmom)
 
 importFrom(DescTools, Trim)
 importFrom(doParallel, registerDoParallel)
-importFrom(EmiStatR, EmiStatR, input, Level2Volume)
 importFrom(foreach, foreach, "%dopar%", "%do%")
 importFrom(gstat, krigeST, vgmAreaST)
 importFrom(ggplot2, ggplot, aes, geom_line, geom_ribbon, theme, theme_bw, element_text) 
