@@ -37,6 +37,33 @@ Bbox.offset <- function(bbox, offset, sp.proj4string){
   return(ps1)
 }
 
+#' Crop a STFDF object using the raster package
+#'
+#' Given a STFDF object and a SpatialPolygonsDataFrame, create a subset as the intersection between
+#' the STFDF and the SpatialPolygonsDataFrame in space.
+#'
+#' @param stfdf the STFDF object to subset.
+#' @param sp.polygons the SpatialPolygonsDataFrame for subsetting the STFDF.
+#'
+#' @return a STFDF object which is the requested spatial subset from stfdf.
+#'
+#' @importFrom "raster" "RasterBrick"
+#' @importFrom "spacetime" "STFDF"
+#' 
+#' @export STFDF.crop
+
+STFDF.crop <- function(stfdf, sp.polygons){
+  dat_raster   <-as(dat_stfdf1, "RasterBrick")
+  dat_raster@z <- list(index(dat_stfdf1@time))
+  dat_stfdf    <- as(crop(x = dat_raster, y = ps1), "STFDF")
+  
+  return(dat_stfdf)
+}
+
+
+
+
+
 #' Create a subset from a STFDF object
 #'
 #' Given a STFDF object and a SpatialPolygonsDataFrame, create a subset as the intersection between
@@ -51,7 +78,7 @@ Bbox.offset <- function(bbox, offset, sp.proj4string){
 #' 
 #' @export Subset.stfdf
 
-Subset.stfdf <- function(stfdf, sp.polygons){
+Subset.stfdf <- function(stfdf, sp.polygons){ # TODO: check grid dim is correct
   if(identical(stfdf@sp@proj4string, sp.polygons@proj4string) == FALSE) 
     stop("geographical projections for stfdf and sp.polygons must be the same")
   

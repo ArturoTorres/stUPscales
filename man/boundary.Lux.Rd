@@ -3,10 +3,10 @@
 \alias{boundary.Lux}
 \docType{data}
 \title{
-A shapefile for the boundary of the Grand-Duchy of Luxembourg
+A SpatialPolygonsDataFrame for the boundary of the Grand-Duchy of Luxembourg
 }
 \description{
-A shapefile for the country boundary of the Grand-Duchy of Luxembourg
+A SpatialPolygonsDataFrame for the country boundary of the Grand-Duchy of Luxembourg
 }
 \usage{data("Lux_boundary")}
 \format{
