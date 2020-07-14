@@ -1,10 +1,7 @@
 # stUPscales
  Spatio-Temporal Uncertainty Propagation Across Multiple Scales - R package
  
- Copyright 2010 - 2019 Luxembourg Institute of Science and Technology.
-
-
-This is a collection of R routines for Arturo's thesis. This might be devided/merged into other R packages later.
+ Copyright 2010 - 2020 Luxembourg Institute of Science and Technology.
 
 What is new!
 

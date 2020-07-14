@@ -49,20 +49,17 @@ Bbox.offset <- function(bbox, offset, sp.proj4string){
 #'
 #' @importFrom "raster" "RasterBrick"
 #' @importFrom "spacetime" "STFDF"
+#' @importFrom "xts" "index"
 #' 
 #' @export STFDF.crop
 
 STFDF.crop <- function(stfdf, sp.polygons){
-  dat_raster   <-as(dat_stfdf1, "RasterBrick")
-  dat_raster@z <- list(index(dat_stfdf1@time))
-  dat_stfdf    <- as(crop(x = dat_raster, y = ps1), "STFDF")
+  dat_raster   <-as(stfdf, "RasterBrick")
+  dat_raster@z <- list(index(stfdf@time))
+  dat_stfdf    <- as(crop(x = dat_raster, y = sp.polygons), "STFDF")
   
   return(dat_stfdf)
 }
-
-
-
-
 
 #' Create a subset from a STFDF object
 #'
