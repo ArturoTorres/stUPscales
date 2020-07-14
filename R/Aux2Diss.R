@@ -48,6 +48,7 @@ Bbox.offset <- function(bbox, offset, sp.proj4string){
 #' @return a STFDF object which is the requested spatial subset from stfdf.
 #'
 #' @importFrom "raster" "RasterBrick"
+#' @importFrom "raster" "crop"
 #' @importFrom "spacetime" "STFDF"
 #' @importFrom "zoo" "index"
 #' 
