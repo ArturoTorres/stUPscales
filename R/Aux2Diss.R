@@ -49,7 +49,7 @@ Bbox.offset <- function(bbox, offset, sp.proj4string){
 #'
 #' @importFrom "raster" "RasterBrick"
 #' @importFrom "spacetime" "STFDF"
-#' @importFrom "xts" "index"
+#' @importFrom "zoo" "index"
 #' 
 #' @export STFDF.crop
 
