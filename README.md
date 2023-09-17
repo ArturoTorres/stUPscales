@@ -1,5 +1,5 @@
 # stUPscales
- Spatio-Temporal Uncertainty Propagation Across Multiple Scales - R package
+ Spatio-Temporal Uncertainty Propagation Across Multiple Scales - R package (development version)
  
  Copyright 2010 - 2020 Luxembourg Institute of Science and Technology.
 
