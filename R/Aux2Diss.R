@@ -10,8 +10,8 @@
 #' Given a bounding box and a offset distance, creates a SpatialPolygon
 #'
 #' @param bbox the bounding box to offset.
-#' @param offset the obset distance.
-#' @param sp.proj4string the proj4string definition for the SpatialPoyigon to create.
+#' @param offset the offset distance.
+#' @param sp.proj4string the proj4string definition for the SpatialPolygons to create.
 #'
 #' @return a SpatialPolygons object which is the requested spatial offset from the bounding box.
 #'
